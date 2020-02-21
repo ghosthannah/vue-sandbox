@@ -1,0 +1,51 @@
+{
+  "name": "vue-sandbox",
+  "version": "0.0.0",
+  "license": "MIT",
+  "description": "Vue Sandbox application with webpack & express",
+  "author": {
+    "name": "ghosthannah"
+  },
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/ghosthannah/vue-sandbox.git"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/plugin-transform-arrow-functions": "^7.8.3",
+    "@babel/polyfill": "^7.8.3",
+    "@babel/preset-env": "^7.8.4",
+    "@vue/babel-preset-jsx": "^1.1.2",
+    "autoprefixer": "^9.7.4",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
+    "copy-webpack-plugin": "^5.1.1",
+    "cross-env": "^7.0.0",
+    "css-loader": "^3.4.2",
+    "cssnano": "^4.1.10",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.13.1",
+    "nodemon": "^2.0.2",
+    "npm-run-all": "^4.1.5",
+    "postcss-loader": "^3.0.0",
+    "sass": "^1.25.0",
+    "sass-loader": "^8.0.2",
+    "vue": "^2.6.11",
+    "vue-loader": "^15.9.0",
+    "vue-template-compiler": "^2.6.11",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0"
+  },
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --hot",
+    "start": "run-p watch:client watch:server",
+    "watch:client": "npm run dev -- --open",
+    "watch:server": "nodemon server.js --ignore src/"
+  }
+}
