@@ -3,6 +3,6 @@ module.exports = {
     "autoprefixer": {},
     "cssnano": {},
     "postcss-import": {},
-    "postcss-next": {}
+    "postcss-cssnext": {}
   }
 };
