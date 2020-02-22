@@ -3,9 +3,9 @@
 </template>
 
 <style>
-    .main {
-        font-family: 'Helvetica-Neue', Helvetica, Arial, sans-serif;
-    }
+.main {
+  font-family: "Helvetica-Neue", Helvetica, Arial, sans-serif;
+}
 </style>
 
 <script>

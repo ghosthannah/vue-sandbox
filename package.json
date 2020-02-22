@@ -1,6 +1,6 @@
 {
   "name": "vue-sandbox",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "license": "MIT",
   "description": "Vue Sandbox application with webpack & express",
   "author": {
@@ -50,8 +50,8 @@
   },
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --hot",
-    "start": "run-p watch:client watch:server",
-    "watch:client": "npm run dev -- --open",
-    "watch:server": "nodemon server.js --ignore src/"
+    "start": "run-p dev:client dev:server",
+    "dev:client": "npm run dev -- --open",
+    "dev:server": "nodemon server.js --ignore src/"
   }
 }
