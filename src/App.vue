@@ -1,10 +1,17 @@
 <template>
-  <div id="app" class="main">Welcome, {{ username }}! This is a VueJS app.</div>
+  <div class="main">
+    <h2>{{ title }}</h2>
+    <div>Welcome, {{ username }}! This is a VueJS app.</div>
+  </div>
 </template>
 
-<style>
+<style lang="scss">
 .main {
-  font-family: "Helvetica-Neue", Helvetica, Arial, sans-serif;
+  padding: 20px;
+
+  @include until-medium {
+    padding: 5px;
+  }
 }
 </style>
 
@@ -13,6 +20,7 @@ export default {
   name: "App",
   data() {
     return {
+      title: "Vue Sandbox",
       username: "Hannah"
     };
   }

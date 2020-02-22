@@ -1,0 +1,25 @@
+$breakpoints: (
+    'small': 0,
+    'medium': 768px,
+    'large': 1024px
+);
+
+$breakpoint-px: map-get($breakpoints, 'large');
+
+$dark-red: #96151D;
+$black: #000000;
+$white: #ffffff;
+$light-grey: #eaeaea;
+$med-grey: #979797;
+$dark-grey: #3a3a3a;
+$navy: #103d6a;
+$dark-teal: #248884;
+$teal: #32d7b2;
+$turquoise: #006778;
+$light-aqua: #c6fff2;
+$lighter-aqua: #d8fff6;
+
+$font-type: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-weight-light: 200;
+$font-weight-normal: 400;
+$font-weight-bold: 600;

@@ -55,14 +55,14 @@ module.exports = {
               ]
             }
           },
-          { loader: "sass-loader", options: { sourceMap } }
-          ,
-            {
-                loader: "sass-resources-loader",
-                options: {
-                    resources: "../src/scss/resources.scss"
-                }
+          { loader: "sass-loader", options: { sourceMap } },
+          {
+            loader: "sass-resources-loader",
+            options: {
+              resources:
+                path.resolve(__dirname, "../src/scss/") + "/resources.scss"
             }
+          }
         ]
       },
       {

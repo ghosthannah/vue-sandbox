@@ -1,0 +1,10 @@
+// import defined scss variables & mixins here
+@import "./variables";
+@import "./mixins";
+
+// write global application styles here
+body {
+  background-color: $lighter-aqua;
+  font-family: $font-type;
+  font-weight: $font-weight-light;
+}
