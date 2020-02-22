@@ -2,13 +2,142 @@
 @import "./variables";
 @import "./mixins";
 
-// write global application styles here
+// write global application styles here to create theme
 body {
-  background-color: $lighter-aqua;
+  background-color: $white;
   font-family: $font-type;
   font-weight: $font-weight-light;
 }
 
+.grid-container {
+  width: 100%;
+}
+
+.grid-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+// 12 grid
+.grid-2 {
+  width: 16.666%;
+}
+
+.grid-4 {
+  width: 33.333%;
+}
+
+.grid-6 {
+  width: 50%;
+}
+
+.grid-8 {
+  width: 66.667%;
+}
+
+.grid-10 {
+  width: 83.333%;
+}
+
+.grid-10 {
+  width: 100%;
+}
+
 .display-inline-block {
-    display: inline-block;
+  display: inline-block;
+}
+
+.display-inline {
+  display: inline;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.float-clear {
+  float: clear;
+}
+
+a {
+  color: $bright-red;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:visited {
+  color: $dark-red;
+}
+
+b {
+  font-weight: $font-weight-bold;
+}
+
+mark {
+  background-color: $lighter-aqua;
+}
+
+blockquote {
+  background: $lighter-aqua;
+  display: block;
+  padding: 24px 20px !important;
+  margin: 20px 0 !important;
+  border-radius: 4px;
+  line-height: 26px;
+  text-align: justify;
+}
+
+blockquote:before {
+  font-family: Georgia, serif;
+  font-size: 13px;
+  content: "\201C";
+  margin-right: 4px;
+  margin-left: -8px;
+  display: inline-block;
+  vertical-align: top;
+  height: 30px;
+  line-height: 48px;
+  font-size: 50px;
+  opacity: 0.2;
+}
+
+blockquote:after {
+  font-family: Georgia, serif;
+  font-size: 13px;
+  content: "\201D";
+  margin-left: 4px;
+  margin-right: -8px;
+  display: inline-block;
+  vertical-align: top;
+  height: 30px;
+  line-height: 48px;
+  font-size: 50px;
+  opacity: 0.2;
+}
+
+// title
+h1,
+h2,
+h3 {
+  font-weight: $font-weight-bold;
+  color: $turquoise;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+// subtitle
+h4,
+h5,
+h6 {
+  font-weight: $font-weight-normal;
+  color: $dark-teal;
+  margin-top: 5px;
+  margin-bottom: 10px;
 }

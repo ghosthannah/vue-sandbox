@@ -1,13 +1,13 @@
 <template>
   <div class="card-main">
     <a class="card style-like-div" v-if="link" :href="link">
-      <h2 class="card-title">{{ title }}</h2>
-      <h5 class="card-subtitle" v-if="subtitle">{{ subtitle }}</h5>
+      <h2>{{ title }}</h2>
+      <h4 v-if="subtitle">{{ subtitle }}</h4>
       <div class="card-content" v-if="content" v-html="content"></div>
     </a>
     <div v-else class="card">
-      <h2 class="card-title">{{ title }}</h2>
-      <h5 class="card-subtitle" v-if="subtitle">{{ subtitle }}</h5>
+      <h2>{{ title }}</h2>
+      <h4 v-if="subtitle">{{ subtitle }}</h4>
       <div class="card-content" v-if="content" v-html="content"></div>
     </div>
   </div>
@@ -16,6 +16,7 @@
 <style lang="scss">
 .style-like-div {
   text-decoration: none !important;
+  color: $black;
 }
 
 .style-like-div:hover {
@@ -45,20 +46,6 @@ a:hover {
     padding: 5px;
     height: 250px;
     width: 175px;
-  }
-
-  .card-title {
-    font-weight: $font-weight-bold;
-    color: $turquoise;
-    margin-top: 5px;
-    margin-bottom: 5px;
-  }
-
-  .card-subtitle {
-    font-weight: $font-weight-normal;
-    color: $dark-teal;
-    margin-top: 5px;
-    margin-bottom: 10px;
   }
 }
 

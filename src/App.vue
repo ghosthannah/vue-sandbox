@@ -17,6 +17,39 @@
         :link="`${card.link ? card.link : ''}`"
       />
     </div>
+
+    <div class="padding-between">
+      <Article
+        :title="'Sample Article'"
+        :subtitle="'Creating custom components with VueJS'"
+        :imgSrc="'/assets/bulbs.jpg'"
+        :content="loremIpsum1"
+        :author="'ghosthannah'"
+        :publishDate="'2020-02-01'"
+      />
+    </div>
+
+    <div class="padding-between">
+      <Article
+        :title="'No Image? No Problem!'"
+        :subtitle="'This is how a basic post would appear without an image'"
+        :content="loremIpsum3"
+        :author="'ghosthannah'"
+        :publishDate="'2020-02-16'"
+      />
+    </div>
+
+    <div class="padding-between">
+      <Article
+        :title="'Lorem Ipsum Content'"
+        :subtitle="''"
+        :imgSrc="'/assets/coding.jpg'"
+        :imgAlign="'right'"
+        :content="loremIpsum2"
+        :author="'ghosthannah'"
+        :publishDate="'2020-02-22'"
+      />
+    </div>
   </div>
 </template>
 
@@ -42,10 +75,15 @@
 
 <script>
 import Card from "@/components/Card";
+import Article from "@/components/Article";
+
+import content from "@/assets/content";
+
 export default {
   name: "App",
   components: {
-    Card
+    Card,
+    Article
   },
   computed: {
     cards() {
@@ -73,7 +111,10 @@ export default {
   data() {
     return {
       title: "Vue Sandbox",
-      username: "Hannah"
+      username: "Hannah",
+      loremIpsum1: content.ipsum1,
+      loremIpsum2: content.ipsum2,
+      loremIpsum3: content.ipsum3
     };
   }
 };
