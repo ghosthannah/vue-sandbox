@@ -50,10 +50,12 @@ module.exports = {
           {
             loader: "postcss-loader",
             options: {
-              plugins: [
-                require("autoprefixer")(),
-                require("cssnano")({ zindex: false })
-              ]
+              postcssOptions: {
+                plugins: [
+                  require("autoprefixer")(),
+                  require("cssnano")({ zindex: false })
+                ]
+              }
             }
           },
           { loader: "sass-loader", options: { sourceMap } },
@@ -91,12 +93,14 @@ module.exports = {
   },
   plugins: [
     new VueLoaderPlugin(),
-    new CopyWebpackPlugin([
-      {
-        from: path.resolve(__dirname, "../src/assets/"),
-        to: path.resolve(__dirname, "../dist/assets/")
-      }
-    ]),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: path.resolve(__dirname, "../src/assets/"),
+          to: path.resolve(__dirname, "../dist/assets/")
+        }
+      ]
+    }),
     new HtmlWebpackPlugin({
       filename: "index.html",
       template: "index.html",
